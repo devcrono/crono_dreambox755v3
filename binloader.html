@@ -1,0 +1,72 @@
+<html>
+<meta charset="UTF-8" />
+<link rel="shortcut icon" href="img/favicon.ico" />
+<title>CRONO_ DREAMBOX PS4 7.5x V1.20</title>
+<link rel="stylesheet" href="css/main.css">
+<style > 
+html, body{
+background: url('img/bg1.png');
+background-attachment: fixed;
+background-size:100% 100%;
+background-repeat:no-repeat;
+background-color: #000;
+}
+</style>
+<body onload="go()">
+<script>
+if(document.cookie.indexOf('kex=0') >= 0)
+    document.location.href = 'index.html';
+</script>
+<script>
+function print(){}
+
+var scriptCode = '';
+
+function preloadScripts(lst)
+{
+    for(var i = 0; i < lst.length; i++)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', lst[i], false);
+        xhr.send('');
+        scriptCode += xhr.responseText + '\n';
+    }
+}
+
+function done()
+{
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("Tudo pronto! Bons Jogos!");
+        read_ptr_at(0);
+    }
+    else
+        alert("O Jailbreak falhou! Reinicie seu PS4 e tente novamente.");
+}
+
+window.midExploit = function()
+{
+    preloadScripts(['75x.js', 'c-code.js', 'jb.js'], go);
+}
+
+window.postExploit = function()
+{
+    document.cookie = 'kex=0';
+    setTimeout(function() //update the screen one last time...
+    {
+        eval.call(window, scriptCode);
+        done();
+    }, 100);
+};
+</script>
+<script src="utils.js"></script>
+<script src="int64.js"></script>
+<script src="ps4.js"></script>
+<button id="input1" onfocus="handle2()"></button>
+<button id="input2"></button>
+<button id="input3" onfocus="handle2()"></button>
+<select id="select1">
+<option value="value1">Value1</option>
+</select>
+</body>
+</html>
