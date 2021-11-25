@@ -49,9 +49,9 @@ function jailbreakLogInit() {
     if (logLevel > 0) {
       let logArea = document.getElementById("log_area");
       convertTime(Date.now() - jailbreak_start_date);
-      logArea.innerHTML += `<h1>${"Attempts: "+jailbreak_attempts+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp&nbsp&nbsp&nbspElapsed Time: " + zerofy(hours) + ":" + zerofy(minutes) + ":" + zerofy(seconds) + ""}`;
+      logArea.innerHTML += `<h1>${"Número de Tentativas: "+jailbreak_attempts+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDuração Total: " + zerofy(hours) + ":" + zerofy(minutes) + ":" + zerofy(seconds) + ""}`;
       logArea.offsetHeight;   
-    }
+  }
   
 function print(){}
 
