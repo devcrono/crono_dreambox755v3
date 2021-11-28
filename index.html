@@ -1,257 +1,213 @@
 <!DOCTYPE html>
-<html manifest="cache.manifest">
-<head>
-<meta charset="UTF-8" />
-<link rel="shortcut icon" href="img/favicon.ico" />
-<title>CRONO_ DREAMBOX PS4 7.5x V1.20</title>
-<link rel="stylesheet" href="css/main.css">
-<style > 
-html, body{
-background: url('img/bg1.png');
-background-attachment: fixed;
-background-size:100% 100%;
-background-repeat:no-repeat;
-background-color: #000;
+<html manifest="cache.manifest"><head>
+<title>PS4 7.50 - 7.55 Host v1.5 by GamerHack</title>
+<style>
+html, body {
+background-image: url('img.jpg');
+background-size: 100%;
+background-repeat: no-repeat;
+background-color: #24272b;
+color: white;
+margin: 0px;
+overflow: hidden;
+}
+h1 {
+text-shadow: 0.1em 0.1em 0.2em black;
+font-size: 25px;
+text-align: center;
+color: white;
+}
+.btn {
+background-color: #003263;
+color: white;
+width: 260px;
+height: 49px;
+padding-bottom: 5px;
+text-align: center;
+font-size: 20px;
+margin-top: 8px;
+margin-bottom: 8px;
+margin-left: 8px;
+margin-right: 8px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 8px;
+}
+.btn:hover {
+background-color: #0058b1;
+}
+.btn-toolbox {
+background-color: #ae2301;
+}
+.btn-toolbox:hover {
+background-color: #d42a01;
+}
+.btn-web {
+background-color: #076300;
+}
+.btn-web:hover {
+background-color: #18891b;
 }
 </style>
 <script>
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Instalando Cache Offline: " + Percent + "%";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Instalado com Successo ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Agora Feche e Re-Abra o Navegador...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 document.cookie = 'kex=1';
 </script>
 </head>
-<h1 class="msgs" id="msgs">CRONO_ DREAMBOX PS4 7.5x V1.20</h1>
+<h1 id=msgs>PS4 7.50 - 7.55 Host v1.5 by GamerHack</h1>
 <hr>
-
-
-<h1 style=" color:#f00;">Se Tiver problemas com memória insuficiente (INSISTA!!) </h1>
 <br>
-
+<h1 style="font-size:20px;text-align:center;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
 <div style="text-align:center">
-
-<button class="btn btn-main" onmouseover="hengold20b()" onmouseout="pagetitle()" onclick=load_hengold20b()><img class="icone" src="img/HenEnable.png" /><br> GOLD HEN V2.0B </button>&nbsp;
-<button class="btn btn-main" onmouseover="hengold11()" onmouseout="pagetitle()" onclick=load_hengold11()><img class="icone" src="img/HenEnable.png" /><br> GOLD HEN V1.1 </button>&nbsp;
-<button class="btn btn-main" onmouseover="hengold10()" onmouseout="pagetitle()" onclick=load_hengold10()><img class="icone" src="img/HenEnable.png" /><br> GOLD HEN V1.0 </button>&nbsp;
-<button class="btn btn-main" onmouseover="hen213B()" onmouseout="pagetitle()" onclick=load_hen213B()><img class="icone" src="img/HenEnable.png" /><br> HEN V2.1.3b </button>&nbsp;
-<button class="btn btn-main" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_mira75x()><img class="icone" src="img/indice.png" /><br> MIRA 7.5x </button>&nbsp;
-<button class="btn btn-main" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_mira2b()><img class="icone" src="img/indice.png" /><br> MIRA-B </button>&nbsp;
-
+<button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen2()> GoldHEN v2.0b </button>
+<button class="btn" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_goldhen1()> GoldHEN v1.1 </button>
+<button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_mira75x()> MIRA 7.5x </button>
+<button class="btn" onmouseover="mainpayload4()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
 <br>
-
-<a href="https://twitter.com/cronocardoso"><img class="icon" src="img/icon.gif"/></a> 
+<h1 style="font-size:20px;text-align:center;">Payloads</h1>
+<button class="btn" onmouseover="todex()" onmouseout="pagetitle()" onclick=load_todex()> ToDex </button>
+<button class="btn" onmouseover="dumper()" onmouseout="pagetitle()" onclick=load_dumper()> Dumper </button>
+<button class="btn" onmouseover="ftp()" onmouseout="pagetitle()" onclick=load_ftp()> FTP </button>
+<button class="btn" onmouseover="app2usb()" onmouseout="pagetitle()" onclick=load_app2usb()> App2USB </button>
 <br>
-
-<hr style="width: 50%"><h1 style="color:#00FF12;" >PAYLOADS DISPONIVEIS</h1><hr style="width: 50%">
-
-
-<button class="btn" onmouseover="binloader()" onmouseout="pagetitle()" onclick=load_binloader()> <img class="icone" src="img/binloader.png" /><br> Bin Loader </button>&nbsp;
-
-<button class="btn" onmouseover="dumper()" onmouseout="pagetitle()" onclick=load_dumper()> <img class="icone" src="img/dumper.png" /><br> Game Dumper </button>&nbsp;
-
-<button class="btn" onmouseover="ftp()" onmouseout="pagetitle()" onclick=load_ftp()> <img class="icone" src="img/ftp.png" /><br> FTP </button>
-
-<button class="btn" onmouseover="app2usb()" onmouseout="pagetitle()" onclick=load_app2usb()> <img class="icone" src="img/app2usb.png" /><br> App-To-Usb </button>&nbsp;
-
-<button class="btn" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick=load_enablebUpdates()> <img class="icone" src="img/enableupdate.png" /><br> Habilitar Upadates </button>&nbsp;
-
-<button class="btn" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick=load_disableUpdates()> <img class="icone" src="img/disableupdate.png" /><br> Desabilitar Upadates </button>&nbsp;
-
-<button class="btn" onmouseover="todex()" onmouseout="pagetitle()" onclick=load_todex()> <img class="icone" src="img/todex.png" /><br> To -  Dex </button>&nbsp;
-
-<button class="btn" onmouseover="fancontrol()" onmouseout="pagetitle()" onclick=load_fanCtr()> <img class="icone" src="img/FanControl.png" /><br> Controle Da FAN </button>&nbsp;&nbsp;
-<select id="temp" class="temp">
-  <option value="60">60 <font size=3px>&#176;C</font></option>
-  <option value="61">61 <font size=3px>&#176;C</font></option>
-  <option value="62">62 <font size=3px>&#176;C</font></option>
-  <option value="63">63 <font size=3px>&#176;C</font></option>
-  <option value="64">64 <font size=3px>&#176;C</font></option>
-  <option value="65" selected>65 <font size=3px>&#176;C</font></option>
-  <option value="66">66 <font size=3px>&#176;C</font></option>
-  <option value="67">67 <font size=3px>&#176;C</font></option>
-  <option value="68">68 <font size=3px>&#176;C</font></option>
-  <option value="69">69 <font size=3px>&#176;C</font></option>
-  <option value="70">70 <font size=3px>&#176;C</font></option>
-  <option value="71">71 <font size=3px>&#176;C</font></option>
-  <option value="72">72 <font size=3px>&#176;C</font></option>
-  <option value="73">73 <font size=3px>&#176;C</font></option>
-  <option value="74">74 <font size=3px>&#176;C</font></option>
-  <option value="75">75 <font size=3px>&#176;C</font></option>
-  <option value="76">76 <font size=3px>&#176;C</font></option>
-  <option value="77">77 <font size=3px>&#176;C</font></option>
-  <option value="78">78 <font size=3px>&#176;C</font></option>
-  <option value="79">79 <font size=3px>&#176;C</font></option>
-  <option value="80">80 <font size=3px>&#176;C</font></option>
-</select>&nbsp;
-
-<br><br>
-
-<button class="btn" onmouseover="spoofer()" onmouseout="pagetitle()" onclick=load_spoofer()> <img class="icone" src="img/spoofer.png" /><br> Spoofer V8.03 </button>&nbsp;
-
-<button class="btn" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> <img class="icone" src="img/ps4debug.png" /><br> PS4 Debug </button>&nbsp;
-
-<button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> <img class="icone" src="img/rte.png" /><br> Web - RTE </button>&nbsp;
-
-<button class="btn" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> <img class="icone" src="img/rte.png" /><br> PS4 Web Trainer </button>&nbsp;
-
-<button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()><img class="icone" src="img/disableupdate.png" /><br> Bloquear Historico </button>&nbsp;
-
-<button class="btn" onmouseover="ebrowser()" onmouseout="pagetitle()" onclick=load_ebrowser()> <img class="icone" src="img/enableupdate.png" /><br> Habilitar Browser </button>&nbsp;
-
-<button class="btn" onmouseover="dbackup()" onmouseout="pagetitle()" onclick=load_dbackup()> <img class="icone" src="img/backup.png" /><br> Backup DB </button>&nbsp;
-
-<button class="btn" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick=load_dbrestore()> <img class="icone" src="img/restore.png" /><br> Restaurar DB </button>&nbsp;
-
-
-<br><br>
-
-<button class="btn" onmouseover="orbis()" onmouseout="pagetitle()" onclick=load_orbis()> <img class="icone" src="img/todex.png" /><br> Orbis - Toolbox </button>&nbsp;
-
-<button class="btn" onmouseover="webactivator()" onmouseout="pagetitle()" onclick=load_webactivator()> <img class="icone" src="img/todex.png" /><br> Ativador Web </button>&nbsp;
-
-<button class="btn" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick=load_rifRen()> <img class="icone" src="img/keydumper.png" /><br> RIF Renaner </button>&nbsp;
-
-<button class="btn" onmouseover="exitidu()" onmouseout="pagetitle()" onclick=load_load_exitidu()> <img class="icone" src="img/history.png" /><br> Exit IDU </button>&nbsp;
-
-<button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> <img class="icone" src="img/linux.png" /><br> Linux 1GB </button>&nbsp;
-
-<button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> <img class="icone" src="img/linux.png" /><br> Linux 3GB </button>&nbsp;
-
-<button class="btn" onmouseover="kernelDump()" onmouseout="pagetitle()" onclick=load_kernelDump()> <img class="icone" src="img/kdumper.png" /><br> Kernel Dumper </button>&nbsp;
-
-<button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick=load_kernelClock()> <img class="icone" src="img/history.png" /><br> Kernel Clock </button>&nbsp;
-
-<button class="btn" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick=load_disbAslr()>  <img class="icone" src="img/disableupdate.png" /><br> Desabilitar ASLR </button>&nbsp;
-
+<button class="btn" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick=load_enablebUpdates()> Enable Updates </button>
+<button class="btn" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick=load_disableUpdates()> Disable Updates </button>
+<button class="btn" onmouseover="dbackup()" onmouseout="pagetitle()" onclick=load_dbackup()> DB Backup </button>
+<button class="btn" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick=load_dbrestore()> DB Restore </button>
 <br>
-
+<button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
+<button class="btn" onmouseover="ebrowser()" onmouseout="pagetitle()" onclick=load_ebrowser()> Enable Browser </button>
+<button class="btn" onmouseover="kernelDump()" onmouseout="pagetitle()" onclick=load_kernelDump()> Kernel Dumper </button>
+<button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick=load_kernelClock()> Kernel Clock </button>
+<br>
+<button class="btn" style="margin-left: 77px" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> PS4 Debug </button>
+<button class="btn" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick=load_disbAslr()> Disable ASLR </button>
+<button class="btn" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick=load_rifRen()> RIF Renamer </button>
+<button class="btn btn-main" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C
+<br>
+<button class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
+<button class="btn" onmouseover="exitidu()" onmouseout="pagetitle()" onclick=load_exitidu()> Exit IDU </button>
+<button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1GB </button>
+<button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
+<br>
+<button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
+<button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>&nbsp
+<hr style="margin-top: 24px;">
+<h1 style="font-size:25px;text-align:center;margin-top: 15px;color:yellow;">Many Thanks to:&nbsp&nbsp<a href="https://twitter.com/sleirsgoevy" style="color:#f31414;">@sleirsgoevy</a>&nbsp&nbsp<a style="color:white;">ChendoChap</a>&nbsp&nbsp<a href="https://twitter.com/_AlAzif" style="color:#f31414;">@_AlAzif</a>&nbsp&nbsp<a style="color:white;">And to all the people who keep the scene alive day after day</a></h1>
 </div>
 <script>
-
-function hengold20b(){
-document.getElementById("msgs").innerHTML = "HEN-GOLD V2.0B Para todos os FW 7.5x";
-}
-function hengold11(){
-document.getElementById("msgs").innerHTML = "HEN-GOLD V1.1 Para todos os FW 7.5x";
-}
-function hengold10(){
-document.getElementById("msgs").innerHTML = "HEN-GOLD V1.0 Para todos os FW 7.5x";
-}
-function hen213B(){
-document.getElementById("msgs").innerHTML = "HEN V2.1.3B Para todos os FW 7.5x + SPOOF";
-}
 function mainpayload1(){
-document.getElementById("msgs").innerHTML = "MIRA Para todos os FW 7.5x";
+document.getElementById("msgs").innerHTML = "GoldHEN v2.0b for All Firmwares 7.5x (Includes Temporary Fix for CE-30391-6)";
 }
 function mainpayload2(){
-document.getElementById("msgs").innerHTML = "MIRA para todos os FW 7.5x + SPOOF (correção CE-30391-6)";
+document.getElementById("msgs").innerHTML = "GoldHEN v1.1 for All Firmwares 7.5x (Includes Temporary Fix for CE-30391-6)";
+}
+function mainpayload3(){
+document.getElementById("msgs").innerHTML = "MIRA for All Firmwares 7.5x";
+}
+function mainpayload4(){
+document.getElementById("msgs").innerHTML = "Inject a Payload Using the IP of the console and Port 9021";
 }
 function todex(){
-document.getElementById("msgs").innerHTML = "Habilita algumas funções Especiais na Aba dos Jogos";
-}
-function webrte(){
-document.getElementById("msgs").innerHTML = "Habilita algumas funções Especiais como envio de Cheaters";
-}
-function ps4trainer(){
-document.getElementById("msgs").innerHTML = "Site do PS4 Trainer (siga as instruções lá!)";
+document.getElementById("msgs").innerHTML = "Enable Some Debugging Functions Available on TestKit";
 }
 function dumper(){
-document.getElementById("msgs").innerHTML = "Dump seus jogos (necessário ter um drive USB em exFAT) ";
+document.getElementById("msgs").innerHTML = "Dump your Games (Necessary a USB Drive in exFAT)";
 }
 function ftp(){
-document.getElementById("msgs").innerHTML = "Acesse seu console através do FTP";
+document.getElementById("msgs").innerHTML = "Access this console Through FTP (Be careful what you do)";
 }
 function app2usb(){
-document.getElementById("msgs").innerHTML = "Transferi jogos para para unidade USB em exFAT ";
+document.getElementById("msgs").innerHTML = "Transfer Games / Apps to USB Drive in exFAT";
 }
 function enableUpdates(){
-document.getElementById("msgs").innerHTML = "Habilita as atualizações do sistema";
+document.getElementById("msgs").innerHTML = "Enable System Updates";
 }
 function disableUpdates(){
-document.getElementById("msgs").innerHTML = "Desabilita as atualizações do sistema";
+document.getElementById("msgs").innerHTML = "Disable System Updates";
 }
 function dbackup(){
-document.getElementById("msgs").innerHTML = "Cria um backup do BD do console em uma unidade USB";
+document.getElementById("msgs").innerHTML = "Creates a Backup of the Console Database and Your User on a USB Drive";
 }
 function dbrestore(){
-document.getElementById("msgs").innerHTML = "Restaurar backup de banco de dados de unidade USB";
+document.getElementById("msgs").innerHTML = "Restore Database Backup from USB Drive";
 }
 function historyBlocker(){
-document.getElementById("msgs").innerHTML = "Desative o histórico do navegador";
+document.getElementById("msgs").innerHTML = "Disable Browser History, it will only show Frequently used Pages once you open";
 }
 function ebrowser(){
-document.getElementById("msgs").innerHTML = "Habilite o histórico do navegador";
+document.getElementById("msgs").innerHTML = "Enable The PS4 Browser";
 }
 function kernelDump(){
-document.getElementById("msgs").innerHTML = "Dump do kernel do console para uma unidade USB";
+document.getElementById("msgs").innerHTML = "Dump a Conole Kernel to USB Drive";
 }
 function kernelClock(){
-document.getElementById("msgs").innerHTML = "Alterar a hora do relógio do kernel do console";
-}
-function binloader(){
-document.getElementById("msgs").innerHTML = "Injeta um arquivo BIN usando o seu IP na porta 9021";
-}
-function disbaslr(){
-document.getElementById("msgs").innerHTML = "Desativa o ASLR (randomização do layout do espaço de endereço)";
-}
-function rifrenamer(){
-document.getElementById("msgs").innerHTML = "Renomeia RIFs 'falsos' para RIFs 'oficiais'";
-}
-function fancontrol(){
-document.getElementById("msgs").innerHTML = "Contole da FAN (Selecione a Temp. Antes de Ativar o Payload)";
-}
-function spoofer(){
-document.getElementById("msgs").innerHTML = "Spoofer FW V8.03, corrigi erros de pareamento com dispositivos.";
+document.getElementById("msgs").innerHTML = "Change the Time for the Console Kernel Clock";
 }
 function ps4debug(){
-document.getElementById("msgs").innerHTML = "Habilita algumas funções Especiais Na aba de Opções dos Jogos";
+document.getElementById("msgs").innerHTML = "Activate Your User Account Offline";
 }
-function orbis(){
-document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha para FW 7.5x";
+function disbaslr(){
+document.getElementById("msgs").innerHTML = "Disables the ASLR (Address space layout randomization)";
 }
-function webactivator(){
-document.getElementById("msgs").innerHTML = "Ative sua conta de usuário no navegador do console";
+function rifrenamer(){
+document.getElementById("msgs").innerHTML = "Renames 'fake' RIFs to 'free' RIFs";
+}
+function fanthreshold(){
+document.getElementById("msgs").innerHTML = "Modify PS4 FAN Speed";
+}
+function webact(){
+document.getElementById("msgs").innerHTML = "Activate Your User Account from the Console Browser";
 }
 function exitidu(){
-document.getElementById("msgs").innerHTML = "Sai do Modo IDU (Opção pra Desenvolvedores...) ";
+document.getElementById("msgs").innerHTML = "Disable IDU Mode, if you have activated it by mistake";
 }
 function linux1gb(){
-document.getElementById("msgs").innerHTML = "Linux PS4 1GB ";
+document.getElementById("msgs").innerHTML = "Load Linux with 1GB VRAM";
 }
 function linux3gb(){
-document.getElementById("msgs").innerHTML = "Linux PS4 3GB ";
+document.getElementById("msgs").innerHTML = "Load Linux with 3GB VRAM";
+}
+function orbistoolbox(){
+document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha Build 1167 for Firmware 7.55";
+}
+function webrte(){
+document.getElementById("msgs").innerHTML = "Required to Activate Cheats Through the PS4 Trainer Website";
+}
+function ps4trainer(){
+document.getElementById("msgs").innerHTML = "PS4 Trainer Website (Follow Instructions There)";
 }
 function pagetitle(){
-document.getElementById("msgs").innerHTML = "CRONO_ DREAMBOX PS4 7.5x V1.20";
+document.getElementById("msgs").innerHTML = "PS4 7.50 - 7.55 Host v1.5 by GamerHack";
 }
 
+for(var i=40; i<=79; i++){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=60;
 
-function load_hengold20b(){
+function load_goldhen2(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
-        link.href = 'goldhen2.0b-75x.html';
+        link.href = 'goldhen2.0b.html';
         link.click();
 }
-
-function load_hengold11(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'goldhen11-75x.html';
-        link.click();
-}
-function load_hengold10(){
+function load_goldhen1(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
-        link.href = 'goldhen-75x.html';
-        link.click();
-}
-function load_hen213B(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'payload.html#f=hen213b.js';
+        link.href = 'goldhen1.1.html';
         link.click();
 }
 function load_mira75x(){
@@ -261,11 +217,11 @@ function load_mira75x(){
         link.href = 'mira-75x.html';
         link.click();
 }
-function load_mira2b(){
+function load_binloader(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
-        link.href = 'payload.html#f=mira2b.js';
+        link.href = 'payload.html';
         link.click();
 }
 function load_todex(){
@@ -275,23 +231,6 @@ function load_todex(){
         link.href = 'payload.html#f=todex.js';
         link.click();
 }
-function load_webrte(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'payload.html#f=webrte.js';
-        link.click();
-}
-
-function load_ps4trainer(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'http://ps4trainer.com/Trainer/index.html';
-    link.target = "blank";
-        link.click();
-}
-
 function load_dumper(){
 
   var link = document.createElement('a');
@@ -369,11 +308,11 @@ function load_kernelClock(){
         link.href = 'payload.html#f=kernel-clock.js';
         link.click();
 }
-function load_binloader(){
+function load_ps4debug(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
-        link.href = 'payload.html';
+        link.href = 'payload.html#f=ps4debug.js';
         link.click();
 }
 function load_disbAslr(){
@@ -390,46 +329,25 @@ function load_rifRen(){
         link.href = 'payload.html#f=rif-renamer.js';
         link.click();
 }
-function load_fanCtr(){
+function load_fanthreshold(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
         link.href = 'payload.html#f=fanThreshold.js';localStorage.setItem('fanthreshold', tempC.value);
         link.click();
 }
-function load_spoofer(){
+function load_webact(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
-        link.href = 'payload.html#f=spoofer.js';
-        link.click();
-}
-function load_ps4debug(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'payload.html#f=ps4debug.js';
+        link.href = 'web-activator.html';
         link.click();
 }
 function load_exitidu(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
-        link.href = 'payload.html#f=exitidu.js';
-        link.click();
-}
-function load_orbis(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'payload.html#f=Orbis-Toolbox-755.js';
-        link.click();
-}
-function load_webactivator(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'web-activator.html';
+        link.href = 'payload.html#f=idu.js';
         link.click();
 }
 function load_linux1gb(){
@@ -445,6 +363,33 @@ function load_linux3gb(){
         document.body.appendChild(link);
         link.href = 'payload.html#f=linux-3gb.js';
         link.click();
+}
+function load_toolbox(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=Orbis-Toolbox-755.js';
+        link.click();
+}
+function load_webrte(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=webrte.js';
+        link.click();
+}
+function load_ps4trainer(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'http://ps4trainer.com/Trainer/index.html';
+		link.target = "blank";
+        link.click();
+}
+
+var jailbreak_start_date = localStorage.getItem("jailbreak_start_date");
+if (jailbreak_start_date !== null) {
+  localStorage.removeItem("jailbreak_start_date");
 }
 </script>
 </body>
